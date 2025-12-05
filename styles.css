@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+    color: black;
+    font-family: sans-serif;
+}
+
+.vault-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /* Centre le conteneur si besoin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vault, .cursor, .graduation, .label, .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* #vault, #dial, .cursor, .graduation, .label, .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+/* Cercle principal */
+.vault {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #444;
+    transform-origin: center center;
+}
+
+#vault {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #444;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* .label {
+    color: white;
+    font-size: 16px;
+} */
+
+.cursor {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid red;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 200px; /* rayon du vault */
+  transform: translate(-50%, -50%) /*rotate(0deg);*/
+}
+
+.center {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
