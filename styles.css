@@ -3,83 +3,86 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 50rem;
     background: white;
     color: black;
     font-family: sans-serif;
 }
 
 .vault-container {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    /* margin-top: 1rem; */
+    /* margin-bottom: 5rem; */
     position: relative;
-    width: 300px;
-    height: 300px;
-    /* Centre le conteneur si besoin */
+    width: 30rem;
+    height: 30rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.vault, .cursor, .graduation, .label, .center {
+.vault, .cursor, .graduation, .label, .center, .center_black {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
 }
 
-/* #vault, #dial, .cursor, .graduation, .label, .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-
-/* Cercle principal */
 .vault {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 4px solid #444;
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+
     transform-origin: center center;
+    /* margin: ; */
+    z-index: 4;
 }
 
-#vault {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 4px solid #444;
-  position: relative;
-  margin: 0 auto;
-}
+/* #vault { */
+  /* width: 250px; */
+  /* height: 250px; */
+  /* border-radius: 50%; */
+  /* border: 4px solid #444; */
 
-/* .label {
-    color: white;
-    font-size: 16px;
-} */
+
+/* } */
 
 .cursor {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid red;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 1rem solid red;
 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: 50% 200px; /* rayon du vault */
-  transform: translate(-50%, -50%) /*rotate(0deg);*/
+  transform-origin: 50% 12rem;
+  transform: translate(-50%, -50%)
 }
 
 .center {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 16rem;
+  height: 16rem;
   background: #ccc;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 0.2rem solid #444;
   z-index: 2;
+}
+
+.center_black {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background: #444;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }

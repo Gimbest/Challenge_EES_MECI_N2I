@@ -1,19 +1,31 @@
-let dial = document.getElementById("dial");
+// let dial = document.getElementById("dial");
 const cursor = document.getElementById("cursor");
 const vault = document.getElementById("vault");
-let isDragging = false;
 const angleInput = document.getElementById("password");
+let clearbutton = document.getElementById("clear");
+angleInput.value = "";
 let currentAngle = 0;
+let startedOnVault = false;
+let isDragging = false;
 
 // Code secret sous forme d’angles
 const combination = [30, 180, 300];
 let step = 0;
 
-vault.addEventListener("mousedown", () => isDragging = true);
+vault.addEventListener("mousedown", () => {
+    isDragging = true;
+    startedOnVault = true;
+});
 
 document.addEventListener("mouseup", () => {
+    if (startedOnVault) {
+        let value = Math.round(currentAngle);
+        if (value === 10) value = 0;
+        angleInput.value += value;
+
+    }
     isDragging = false;
-    angleInput.value = Math.round(currentAngle);
+    startedOnVault = false;
 });
 
 document.addEventListener("mousemove", e => {
@@ -52,13 +64,6 @@ function checkStep(angle) {
     }
 }
 
-function unlock() {
-    console.log("VOÛTE OUVERTE");
-    alert("Vault ouverte !");
-}
-
-
-
   // Création des graduations 0 à 9
   for (let i = 0; i < 10; i++) {
     const grad = document.createElement('div');
@@ -75,6 +80,7 @@ function unlock() {
     label.style.transformOrigin = 'center';
     label.innerText = i;
     label.style.fontSize = '16px';
+    label.style.userSelect = 'none';
     
     vault.appendChild(grad);
     vault.appendChild(label);
@@ -98,3 +104,9 @@ document.addEventListener("mousemove", e => {
 
   cursor.style.transform = `translate(-50%, -50%) translateY(-${radius}px) rotate(${angle}deg)`;
 });
+
+function clearInput() {
+    angleInput.value = "";
+}
+
+document.getElementById("clear").addEventListener("click", clearInput);

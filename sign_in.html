@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,23 +13,22 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <!-- <p>Never gonna give you up</p>
-        <p>Never gonna let you down</p>
-        <p>Never gonna run around and desert you</p> -->
+        
         <form>
             <div class="id">
                 <input type="text" name="username" placeholder="Identifiant" required/>
             </div>
             <div>
-                <input type="text" id="password" name="password" placeholder="Mot de passe" readony />
+                <input type="text" id="password" name="password" placeholder="Mot de passe" readonly />
             </div>
             <button type="submit">S'identifier</button>
         </form>
         <div class="vault-container">
             <div id="vault">
-                <div class="center_black"></div>
                 <div class="center"></div>
+                <div class="center_black"></div>
                 <div class="cursor" id="cursor"></div>
+
             </div>
             
             <div class="dial" id="dial"></div>
@@ -35,8 +37,6 @@
         <button id="clear">Clear</button>
 
         <script src="vault.js" type="module"></script>
-
-        
         <script src="" async defer></script>
     </body>
 </html>
