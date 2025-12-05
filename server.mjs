@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 import path from "path"
 
 const app = express();
-const port = 3000;
+const port = 4000;
 const saltRounds = 10;
 
 app.use(express.json());
