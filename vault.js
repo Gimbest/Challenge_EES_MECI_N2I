@@ -2,6 +2,7 @@ let dial = document.getElementById("dial");
 const cursor = document.getElementById("cursor");
 const vault = document.getElementById("vault");
 let isDragging = false;
+const angleInput = document.getElementById("password");
 let currentAngle = 0;
 
 // Code secret sous forme d’angles
@@ -12,12 +13,13 @@ vault.addEventListener("mousedown", () => isDragging = true);
 
 document.addEventListener("mouseup", () => {
     isDragging = false;
+    angleInput.value = Math.round(currentAngle);
 });
 
 document.addEventListener("mousemove", e => {
   if (!isDragging) return;
 
-  const rect = dial.getBoundingClientRect();
+  const rect = vault.getBoundingClientRect();
   const cx = rect.left + rect.width / 2;
   const cy = rect.top + rect.height / 2;
 
@@ -27,7 +29,7 @@ document.addEventListener("mousemove", e => {
   let angle = Math.atan2(dy, dx) * (180 / Math.PI);
   angle = (angle + 360) % 360;
 
-  currentAngle = angle;
+  currentAngle = angle / 36;
 
   // Rotation du cercle
   dial.style.transform = `rotate(${angle}deg)`;

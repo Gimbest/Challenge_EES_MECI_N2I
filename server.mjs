@@ -1,26 +1,15 @@
-import http from "http";
-import fs from "fs";
-import path from "path";
+import express from "express";
 
-const server = http.createServer((req, res) => {
-  const filePath = "." + (req.url === "/" ? "/index.html" : req.url);
-  const ext = path.extname(filePath);
+const app = express();
+const port = 3000;
 
-  const type = {
-    ".html": "text/html",
-    ".js": "application/javascript",
-    ".mjs": "application/javascript",
-    ".css": "text/css"
-  }[ext] || "text/plain";
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("."));
 
-  try {
-    const data = fs.readFileSync(filePath);
-    res.writeHead(200, { "Content-Type": type });
-    res.end(data);
-  } catch {
-    res.writeHead(404);
-    res.end("Not found");
-  }
+app.post("/submit", (req, res) => {
+  console.log("Formulaire reçu :", req.body);
+  res.json({ message: `Bonjour ${req.body.username}, formulaire reçu !` });
 });
 
-server.listen(3000);
+app.listen(port, () => console.log(`Serveur lancé sur http://localhost:${port}`));

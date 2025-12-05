@@ -13,16 +13,24 @@
         <!-- <p>Never gonna give you up</p>
         <p>Never gonna let you down</p>
         <p>Never gonna run around and desert you</p> -->
-
-        <div class="vault-container">
-            <div id="vault">
-                <div class="center"></div>
-                <div class="cursor" id="cursor"></div>
+        <form>
+            <div class="id">
+                <input type="text" name="username" placeholder="Identifiant" required/>
             </div>
-            
-            <div class="dial" id="dial"></div>
-            <div class="graduations-container" id="grad"></div>
-        </div>
+            <div>
+                <input type="text" id="password" name="password" placeholder="Mot de passe" readony />
+            </div>
+            <button type="submit">S'identifier</button>
+        </form>
+        <div class="vault-container">
+                <div id="vault">
+                    <div class="center"></div>
+                    <div class="cursor" id="cursor"></div>
+                </div>
+                
+                <div class="dial" id="dial"></div>
+                <div class="graduations-container" id="grad"></div>
+            </div>
 
         <script src="vault.js" type="module"></script>
 
