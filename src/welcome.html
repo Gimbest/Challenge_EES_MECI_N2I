@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bienvenue</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/backButton.css">
+</head>
+<body>
+  <h1 id="greeting">Bonjour !</h1>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get("username");
+    if (username) {
+      document.getElementById("greeting").innerText = `Bonjour ${username} !`;
+    }
+  </script>
+  <form action="../index.html" method="GET">
+    <button type="submit" class="back">Revenir à l'accueil</button>
+  </form>
+</body>
+</html>

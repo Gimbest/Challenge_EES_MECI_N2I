@@ -1,0 +1,42 @@
+[
+  {
+    "username": "Gabriel",
+    "password": "$2b$10$qLbVjXafI.Ukt4o7gSGc6uh6HJxYqioEC/f3nyjZeztFlycPwesIi",
+    "createdAt": "2025-12-05T02:26:02.597Z"
+  },
+  {
+    "username": "Marchal",
+    "password": "$2b$10$nxx/7itfmHGKqptB2hF.kOEu2hvriiFjjLRoifGa60vsNXeep2LFK",
+    "createdAt": "2025-12-05T02:26:19.884Z"
+  },
+  {
+    "username": "aa",
+    "password": "$2b$10$MX3c2ruiZw75MRkm7ICtQ.6nDLwAlg06VyKh15Teo7YwLD8a9U7yy",
+    "createdAt": "2025-12-05T02:36:01.007Z"
+  },
+  {
+    "username": "Greg",
+    "password": "$2b$10$BMetLo1UNEiWOyL/fDEmPuQvzv0vZpd12lgyrOuukdC4D.ZgjzZ8C",
+    "createdAt": "2025-12-05T02:45:01.900Z"
+  },
+  {
+    "username": "AAAA",
+    "password": "$2b$10$OriydMCCqvW.fLAtaoxD5usA0wQkg/6du.6WgE.r4dIMoP0XuVgLG",
+    "createdAt": "2025-12-05T03:28:07.724Z"
+  },
+  {
+    "username": "AAA",
+    "password": "$2b$10$A3MjoE1Un5d84SRaqYOxneW2Rcf9KYfF7WImjW6p/Wa6v0EuD2GG.",
+    "createdAt": "2025-12-05T03:29:27.269Z"
+  },
+  {
+    "username": "Alexandra",
+    "password": "$2b$10$IeLa/JoWQobbOySCywUJzuFpKkraG6No2u7MLAhg3Oiaql9Gn0Ixy",
+    "createdAt": "2025-12-05T03:37:17.902Z"
+  },
+  {
+    "username": "G",
+    "password": "$2b$10$labPa5i1cyw/KtjdxTiO3eDjOAxTrQxdsGcxCa6Ilw3VhGDrcbSgu",
+    "createdAt": "2025-12-05T04:17:38.481Z"
+  }
+]

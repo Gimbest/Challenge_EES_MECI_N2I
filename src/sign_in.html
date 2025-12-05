@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>S'inscrire</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/identifyButton.css">
+        <link rel="stylesheet" href="../styles/clearButton.css">
+        <link rel="stylesheet" href="../styles/textBox.css">
+        <link rel="stylesheet" href="../styles/backButton.css">
+    </head>
+    <body>
+        <form action="/" method="GET" class="centered">
+            <button type="submit" class="back">Revenir à l'accueil</button>
+        </form>
+        <h1>S'inscrire</h1>
+        <form action ="/submit" method="POST" class="centered">
+            <div class="id">
+                <input type="text" name="username" placeholder="Identifiant" required/>
+            </div>
+            <div>
+                <input type="text" id="password" name="password" placeholder="Mot de passe" readonly />
+            </div>
+            <div id="error-message" class="error-message">
+                <!-- ERROR_MESSAGE -->
+            </div>
+            <button type="submit" class="identify">S'inscrire</button>
+        </form>
+        <div>
+            <h2>Faites tourner le coffre fort pour rentrer votre mot de passe !</h2>
+        </div>
+        <div class="vault-container-wrapper">
+            <div class="vault-container">
+                <div id="vault">
+                    <div class="center"></div>
+                    <div class="center_black"></div>
+                    <div class="cursor" id="cursor"></div>
+                </div>
+                
+                <div class="dial" id="dial"></div>
+                <div class="graduations-container" id="grad"></div>
+            </div>
+        </div>
+        
+        <div class="clear-wrapper">
+            <button id="clear" class="button-19">Clear</button>
+        </div>
+
+        <script src="../js/vault.js" type="module"></script>
+        <script src="" async defer></script>
+    </body>
+</html>
